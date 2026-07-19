@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTL Chatbot Fix - صفحه آزمایشی</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f0f2f5;
+            padding: 20px;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        h1 {
+            text-align: center;
+            color: #6C5CE7;
+            margin-bottom: 24px;
+            font-size: 24px;
+        }
+        .chat {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .message {
+            padding: 16px 20px;
+            border-radius: 12px;
+            max-width: 85%;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+        .message.user {
+            background: #6C5CE7;
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 4px;
+        }
+        .message.assistant {
+            background: white;
+            color: #2d3436;
+            align-self: flex-start;
+            border-bottom-left-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .message.assistant p { margin-bottom: 8px; }
+        .message.assistant code {
+            background: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+        .message.assistant pre {
+            background: #2d3436;
+            color: #00b894;
+            padding: 12px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 8px 0;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .badge.test { background: #f0edff; color: #6C5CE7; }
+        .badge.fix { background: #e8f8f5; color: #00b894; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 RTL Chatbot Fix - صفحه آزمایش</h1>
+        <p style="text-align:center; margin-bottom:16px;">
+            <span class="badge test">بدون اکستنشن</span>
+            ← این صفحه متن راست‌چین را <strong>بدون</strong> کمک اکستنشن نشان می‌دهد.
+            اگر اکستنشن نصب باشد، ستون سمت راستِ پیام‌ها اصلاح می‌شود.
+        </p>
+
+        <div class="chat">
+            <!-- User message -->
+            <div class="message user">
+                سلام! می‌تونی درباره تاریخ ایران باستان توضیح بدی؟
+            </div>
+
+            <!-- Assistant response - LONG Persian text -->
+            <div class="message assistant" data-message-author-role="assistant">
+                <p>سلام! بله، حتماً. تاریخ ایران باستان یکی از غنی‌ترین و طولانی‌ترین تاریخ‌های جهان است. تمدن ایران باستان از حدود ۳۲۰۰ سال قبل از میلاد با تمدن ایلام شروع می‌شود و سپس با ورود آریایی‌ها به فلات ایران در حدود ۱۵۰۰ سال قبل از میلاد ادامه پیدا می‌کند.</p>
+                <p>مهمترین سلسله‌های ایران باستان عبارتند از:</p>
+                <ul>
+                    <li><strong>مادها</strong> (۷۲۸-۵۵۰ ق.م) - اولین حکومت متحد ایرانی</li>
+                    <li><strong>هخامنشیان</strong> (۵۵۰-۳۳۰ ق.م) - بزرگترین امپراتوری جهان باستان به رهبری کوروش بزرگ، داریوش و خشایارشا</li>
+                    <li><strong>سلوکیان</strong> (۳۱۲-۶۳ ق.م) - دوره هلنیستی پس از اسکندر</li>
+                    <li><strong>اشکانیان</strong> (۲۴۷ ق.م-۲۲۴ م) - رقیب قدرتمند امپراتوری روم</li>
+                    <li><strong>ساسانیان</strong> (۲۲۴-۶۵۱ م) - آخرین امپراتوری بزرگ ایران پیش از اسلام</li>
+                </ul>
+                <p>کوروش بزرگ، بنیانگذار امپراتوری هخامنشی، به خاطر <strong>منشور حقوق بشر کوروش</strong> مشهور است که به عنوان اولین اعلامیه حقوق بشر در تاریخ شناخته می‌شود. این استوانه گِلی در سال ۵۳۹ قبل از میلاد صادر شد و در آن آزادی مذهبی و حقوق اساسی انسان‌ها به رسمیت شناخته شده است.</p>
+                <blockquote>
+                    «من کوروش، شاه جهان، شاه بزرگ، شاه توانمند، شاه بابل، شاه سومر و اکد، شاه چهار گوشه جهان...»
+                </blockquote>
+                <p>برای اطلاعات بیشتر می‌توانید از کد زیر برای محاسبه سال‌های تاریخ ایران استفاده کنید:</p>
+                <pre><code>function convertPersianYear(gregorianYear) {
+    // Convert Gregorian to Persian Solar Hijri
+    return gregorianYear - 621; // Approximate
+}
+
+console.log(convertPersianYear(2026)); // ~1405</code></pre>
+            </div>
+
+            <!-- Mixed Persian + English -->
+            <div class="message assistant" data-message-author-role="assistant">
+                <p>همانطور که می‌بینید، تاریخ Iran باستان بسیار گسترده است. واژه Persia در واقع از نام استان فارس (Pars) گرفته شده که مرکز امپراتوری هخامنشی بوده است. امروزه در انگلیسی از هر دو واژه Iran و Persia استفاده می‌شود.</p>
+                <p>نکته جالب: عدد π (پی) برابر با ۳.۱۴۱۵۹۲۶۵۳۵۸۹۷۹۳۲۳۸۴۶ است و در ریاضیات کاربرد فراوانی دارد — اما ایرانیان باستان هم محاسبات پیشرفته ریاضی انجام می‌دادند!</p>
+            </div>
+
+            <!-- Arabic text example -->
+            <div class="message assistant" data-message-author-role="assistant">
+                <p>وهذه الفقرة باللغة العربية لتوضيح أن الإضافة تعمل مع جميع اللغات التي تُكتب من اليمين إلى اليسار. اللغة العربية هي إحدى أكثر اللغات انتشاراً في العالم، حيث يتحدث بها أكثر من ۴۰۰ مليون شخص في جميع أنحاء العالم.</p>
+                <p>القرآن الكريم هو الكتاب المقدس في الإسلام، وقد كُتب باللغة العربية الفصحى. كما أن اللغة العربية لها تأثير كبير على العديد من اللغات الأخرى مثل الفارسية والتركية والأردية.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

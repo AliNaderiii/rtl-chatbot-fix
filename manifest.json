@@ -1,0 +1,92 @@
+{
+  "manifest_version": 3,
+  "name": "RTL Chatbot Fix - راست‌چین ساز چت‌بات",
+  "version": "1.0.0",
+  "description": "Automatically fixes right-to-left (RTL) text display issues in chatbots like ChatGPT, Claude, Gemini & more. Supports Persian, Arabic, Kurdish, Urdu, Hebrew and more.",
+  "author": "RTL Chatbot Fix",
+  "homepage_url": "https://github.com/AliNaderiii/rtl-chatbot-fix",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "RTL Chatbot Fix"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://claude.ai/*",
+        "https://gemini.google.com/*",
+        "https://bard.google.com/*",
+        "https://copilot.microsoft.com/*",
+        "https://www.bing.com/chat*",
+        "https://deepai.org/chat*",
+        "https://www.perplexity.ai/*",
+        "https://poe.com/*",
+        "https://you.com/*",
+        "https://huggingface.co/chat/*",
+        "https://chat.mistral.ai/*",
+        "https://x.ai/*",
+        "https://grok.x.ai/*",
+        "https://meta.ai/*",
+        "https://www.meta.ai/*",
+        "https://character.ai/*",
+        "https://pi.ai/*",
+        "https://arena.ai/*",
+        "https://www.arena.ai/*",
+        "https://lmarena.ai/*",
+        "https://www.lmarena.ai/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://chat.openai.com/*",
+    "https://claude.ai/*",
+    "https://gemini.google.com/*",
+    "https://bard.google.com/*",
+    "https://copilot.microsoft.com/*",
+    "https://www.bing.com/*",
+    "https://deepai.org/*",
+    "https://www.perplexity.ai/*",
+    "https://poe.com/*",
+    "https://you.com/*",
+    "https://huggingface.co/*",
+    "https://chat.mistral.ai/*",
+    "https://x.ai/*",
+    "https://grok.x.ai/*",
+    "https://meta.ai/*",
+    "https://www.meta.ai/*",
+    "https://character.ai/*",
+    "https://pi.ai/*",
+    "https://arena.ai/*",
+    "https://www.arena.ai/*",
+    "https://lmarena.ai/*",
+    "https://www.lmarena.ai/*"
+  ],
+  "minimum_chrome_version": "93"
+}

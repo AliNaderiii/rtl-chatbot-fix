@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RTL Chatbot Fix</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+<main class="popup-container">
+  <header class="hero">
+    <div class="brand-mark" aria-label="RTL Chatbot Fix"><svg viewBox="0 0 52 52" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8b7cff"/><stop offset="1" stop-color="#5b43d6"/></linearGradient></defs><rect width="52" height="52" rx="16" fill="url(#g)"/><path d="M37 16H18a7 7 0 0 0-7 7v1a7 7 0 0 0 7 7h11l6 5v-5h2V16Z" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/><path d="M28 21h-9m5 5h-5" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><path d="m33 21 3 3-3 3" fill="none" stroke="#c9c3ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div><h1>RTL Chatbot Fix</h1><p>راست‌چین‌ساز هوشمند چت‌بات‌ها</p></div><span class="version">v1.1</span>
+  </header>
+  <section class="status-card"><div><span class="eyebrow">وضعیت افزونه</span><strong id="statusText">فعال و آماده</strong></div><label class="switch"><input type="checkbox" id="enabledToggle" checked><span class="slider"></span></label></section>
+  <p class="hint top-hint">متن‌های فارسی، عربی، کردی، اردو و عبری را خودکار راست‌چین می‌کنیم.</p>
+  <section class="card font-card"><div class="row"><span class="label">فونت متن فارسی</span><select id="fontSelect"><option value="system">سیستم (پیشنهادی)</option><option value="vazirmatn">Vazirmatn</option><option value="sahel">Sahel</option><option value="iransans">IRANSansX</option><option value="tahoma">Tahoma</option></select></div><p class="font-note">فونت‌های نصب‌شده روی دستگاه شما استفاده می‌شوند.</p></section>
+  <section class="card"><div class="row"><span class="label">حساسیت تشخیص</span><span class="slider-value" id="thresholdValue">۳۰٪</span></div><input type="range" id="thresholdSlider" min="10" max="80" value="30" step="5"><div class="slider-labels"><span>حساس</span><span>متعادل</span><span>سخت‌گیر</span></div></section>
+  <button id="scanBtn" class="btn"><span>✦</span> اسکن و اصلاح صفحه</button>
+  <section class="card platforms-card"><div class="card-heading"><span>پلتفرم‌های محبوب</span><small>پشتیبانی می‌شود</small></div><div class="platforms"><span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>Copilot</span><span>Perplexity</span><span class="arena">Arena.ai</span><span>و بیشتر</span></div></section>
+  <footer class="footer"><div class="creator"><div class="avatar">AN</div><div><small>ساخته شده توسط</small><strong>Ali Naderi</strong></div><a href="https://www.linkedin.com/in/alinaderi-data-scientist" target="_blank" title="LinkedIn">in</a><a class="github" href="https://github.com/AliNaderiii" target="_blank" title="GitHub">⌘</a></div><p>برای تجربه‌ای خواناتر در دنیای هوش مصنوعی ♡</p></footer>
+</main><script src="popup.js"></script></body></html>
