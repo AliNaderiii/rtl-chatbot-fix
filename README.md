@@ -75,6 +75,13 @@
 4. بلوک‌های کد، ریاضیات و LaTeX به صورت چپ‌به‌راست باقی می‌مانند
 5. متن‌های در حال تایپ (streaming) نیز به صورت زنده پردازش می‌شوند
 
+## ✅ راهنمای تصویری نصب افزونه به مرورگر
+<img width="1600" height="900" alt="install-step-1" src="https://github.com/user-attachments/assets/19528530-c317-4e54-b5a6-3966b8cd1e25" />
+<img width="1600" height="900" alt="install-step-2" src="https://github.com/user-attachments/assets/82426867-8f32-45a4-a0bb-05a749175e98" />
+<img width="1600" height="900" alt="install-step-3" src="https://github.com/user-attachments/assets/d13b5d99-3b10-4be0-92a7-ebd68b627efe" />
+<img width="1600" height="900" alt="install-step-4" src="https://github.com/user-attachments/assets/477ca262-2a8a-4dbb-8092-38c88be33bd9" />
+<img width="1600" height="900" alt="install-step-5" src="https://github.com/user-attachments/assets/d66b6c87-2653-4fa4-9d89-bb709bb99faa" />
+
 ## 🔒 حریم خصوصی
 
 این اکستنشن:
